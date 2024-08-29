@@ -37,16 +37,15 @@ Feature: Listing automation
         When I search the employee list by name
         Then I should see the searched name in the employee list 
 
-/////////
 
     Scenario: sorting the list by name
-        Given I'm on the employee table page
-        When I sort the table by  name
-        Then I see the list of employee data in ascending order
-        //
-        //
+        Given I'm on the employee listing page
+        When I click on sort button based on employee name
+        Then I see the list of employee names in ascending order
+        When I click on sort button based on employee name
+        Then I see the list of employee names in descending order
 
-
+///////
 
     Scenario: the pagination 
         Given I'm on the employee table page
