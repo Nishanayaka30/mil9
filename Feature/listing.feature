@@ -47,38 +47,28 @@ Feature: Listing automation
 
 ///////
 
-    Scenario: the pagination 
-        Given I'm on the employee table page
-        When I click on the next page
-
-        Then I should see the next rows of table // psge no
-
-
-        When I click on the previous page
-
-        Then I see the previous rows of table
-
 
     Scenario: filter with pagination
-        Given I'm on the employee table page
+        Given I'm on the employee listing page
         When I filter the designation "SDET" in the present page
-
-        Then I see the rows which has the Designation //
-
-        When I go to the next page
+        Then I should see the employee list of SDET
+        When I navigate to the next page
+        Then I should see the next page number highlighted and filtered list of employees 
         // page 2
         // sdet
-        
-        Then I see the rows which has the Designation
-        When I go to the previous page
-        Then I see the rows which has the Designation
+    
+        When I navigate to the previous page
+        Then I should see the previous page number highlighted and filtered list of employees 
     
 
     Scenario: sorting with pagination 
-        Given I'm on the employee table page
-        When I sort the table by name
-        Then I see the list of employee data in ascending order 
-        When I go to the next page
+        Given I'm on the employee listing page
+        When I click on sort button based on employee name
+        Then I see the list of employee names in ascending order
+        When I click on sort button based on employee name
+        Then I see the list of employee names in descending order
+        //When I navigate to the next page
+
         Then I see the list of employee data in ascending order
         When I go to the previous page 
         Then I see the list of employee data in ascending order
