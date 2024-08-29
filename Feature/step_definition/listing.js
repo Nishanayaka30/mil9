@@ -210,5 +210,11 @@ When('I go to the previous page', async function(){
 
 });
 
+AfterAll(async function(){
+
+    await driver.quit();
+ 
+ });
+
 
 
