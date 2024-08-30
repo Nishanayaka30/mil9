@@ -45,13 +45,13 @@ Feature: Listing automation
         When I click on sort button based on employee name
         Then I see the list of employee names in descending order
 
-///////
+/////
 
 
     Scenario: filter with pagination
         Given I'm on the employee listing page
-        When I filter the designation "SDET" in the present page
-        Then I should see the employee list of SDET
+        When I filter the employee list by designation as "SDET"
+     
         When I navigate to the next page
         Then I should see the next page number highlighted and filtered list of employees 
         // page 2
@@ -65,11 +65,8 @@ Feature: Listing automation
         Given I'm on the employee listing page
         When I click on sort button based on employee name
         Then I see the list of employee names in ascending order
-        When I click on sort button based on employee name
-        Then I see the list of employee names in descending order
-        //When I navigate to the next page
-
-        Then I see the list of employee data in ascending order
+        When I navigate to the next page
+        Then I see the list of employee names in ascending order
         When I go to the previous page 
-        Then I see the list of employee data in ascending order
+        Then I see the list of employee names in ascending order
 
