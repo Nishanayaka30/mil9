@@ -45,8 +45,6 @@ Feature: Listing automation
         When I click on sort button based on employee name
         Then I see the list of employee names in descending order
 
-/////
-
 
     Scenario: filter with pagination
         Given I'm on the employee listing page
@@ -54,8 +52,6 @@ Feature: Listing automation
      
         When I navigate to the next page
         Then I should see the next page number highlighted and filtered list of employees 
-        // page 2
-        // sdet
     
         When I navigate to the previous page
         Then I should see the previous page number highlighted and filtered list of employees 
