@@ -51,10 +51,10 @@ Feature: Listing automation
         Given I'm on the employee listing page
         When I filter the employee list by designation as "SDET"
      
-        When I navigate to the next page
+        When I click on the next page
         Then I should see the filtered list of employees 
     
-        When I navigate to the previous page
+        When I click on the previous page
         Then I should see the filtered list of employees 
     
 

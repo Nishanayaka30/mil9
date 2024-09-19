@@ -162,7 +162,7 @@ Then('I should see the list of employee data in decending order',async function(
     expect(names).to.deep.equal(sortednames);
 });
 
-When('I navigate to the next page',async function(){
+When('I click on the next page',async function(){
     await driver.wait(until.elementLocated(By.css('[data-testid="next-page"]'))).click();
     await new Promise(resolve => setTimeout(resolve,3000));
 });
