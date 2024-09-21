@@ -29,6 +29,8 @@ Before('@create_records', async function(){
                 { ID: '207', Name: person7, Age: '23' , Designation: 'Mobile',status:'IN'}
 
           ];
+
+          
         for (const payload of data) {
             const config = { 'content-type': 'application/json'};
             const postResponse = await axios.post('https://api.example.com/setup-data', payload,config);
@@ -58,6 +60,7 @@ Then('I should see empty page without any records', async function(){
 }); 
 
 When('I filter the list by designation {string}', async function(data){
+    
     
     await driver.wait(until.elementLocated(By.css('[data-testid="dt-filter-0"]'))).sendKeys(Key.chord(CONTROL,'a',Key.DELETE),data); 
     await new Promise(resolve => setTimeout(resolve,3000)); 
